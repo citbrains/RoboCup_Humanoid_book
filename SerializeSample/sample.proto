@@ -1,0 +1,11 @@
+syntax = "proto3";
+message RobotPosition{    //messageの名前の宣言
+ float x = 1;                         //messageに含まれるデータの宣言（float型）
+ float y = 2;
+}
+
+message RobotData{
+  string name = 1;              //string型（文字列型）のデータの宣言
+  int32 robot_id = 2;
+  RobotPosition position = 3; //他のmessage型をデータとして持つ事も可能
+}
